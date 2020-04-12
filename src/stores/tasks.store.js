@@ -29,8 +29,8 @@ export default class TasksStore {
   }
 
   @action
-  async createTask(title, description) {
-    const result = await this.tasksService.createTask(title, description);
+  async createTask(title, descr) {
+    const result = await this.tasksService.createTask(title, descr);
 
     if (result) {
       this.tasks.push(result.data);
